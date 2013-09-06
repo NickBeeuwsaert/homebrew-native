@@ -25,7 +25,7 @@ class CairoNative < Formula
     					  "--enable-quartz=yes", "--enable-quartz-image",
     					  "--enable-xlib=no", "--enable-xlib-xrender=no",
     					  "--without-x", "--enable-xcb-shm=no", "--enable-xcb=no",
-    					  "--enable-gobject=yes",
+    					  "--enable-gobject=yes", "--enable-ft=yes",
                           "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
