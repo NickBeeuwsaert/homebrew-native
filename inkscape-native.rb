@@ -7,7 +7,7 @@ require 'formula'
 class InkscapeNative < Formula
   homepage 'http://inkscape.org/'
   url 'http://downloads.sourceforge.net/inkscape/inkscape-0.48.4.tar.gz'
-  sha1 '5f26f6ad191d1e7c2a9fb69a438722beb172224c'
+  sha1 'ce453cc9aff56c81d3b716020cd8cc7fa1531da0'
   
   depends_on 'pkg-config' => :build
   depends_on 'intltool'
