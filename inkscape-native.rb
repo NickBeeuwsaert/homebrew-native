@@ -24,6 +24,7 @@ class InkscapeNative < Formula
   depends_on 'pango-native'
   depends_on 'poppler' => :optional
   depends_on 'hicolor-icon-theme'
+  depends_on 'homebrew/versions/gcc47'  
   
   fails_with :clang
   
@@ -39,7 +40,6 @@ class InkscapeNative < Formula
   	# just know that if this isn't working you can download the inkscape package
   	# referenced above, extract it somewhere, force link gettext, and use the below patch
   	# to compile it
-  	
     # ENV.j1  # if your formula's build system can't parallelize
  	ENV['CC'] = "/usr/local/bin/gcc-4.7"
  	ENV['LD'] = "/usr/local/bin/gcc-4.7"
