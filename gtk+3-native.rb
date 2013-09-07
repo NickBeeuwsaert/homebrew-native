@@ -23,6 +23,8 @@ class Gtkx3Native < Formula
   depends_on 'jasper' => :optional
   depends_on 'atk'
   depends_on 'at-spi2-atk'
+
+  conflicts_with 'gtk+3', :because => "Installs the same binaries"
   
   def install
     # ENV.j1  # if your formula's build system can't parallelize

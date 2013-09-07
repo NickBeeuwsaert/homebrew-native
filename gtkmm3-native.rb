@@ -19,6 +19,8 @@ class Gtkmm3Native < Formula
   depends_on 'atkmm'
   depends_on 'cairomm-native'
 
+  conflicts_with 'gtkmm3', :because => "Installs the same binaries"
+
   def install
     # ENV.j1  # if your formula's build system can't parallelize
 
