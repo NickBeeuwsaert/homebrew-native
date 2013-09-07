@@ -15,7 +15,7 @@ class CairoNative < Formula
   depends_on :libpng
   depends_on 'pixman'
   depends_on 'glib'
-    
+  depends_on 'freetype'    
   conflicts_with "cairo", :because=>"installs the same binaries"
   
   def install
