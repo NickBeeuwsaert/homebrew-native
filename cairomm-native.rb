@@ -14,13 +14,13 @@ class CairommNative < Formula
   depends_on 'pkg-config' => :build
   depends_on 'libsigc++'
   depends_on 'cairo-native'
-    
+  depends_on 'fontconfig'    
   conflicts_with "cairomm", :because=>"installs the same binaries"
   
   
   def install
     # ENV.j1  # if your formula's build system can't parallelize
-
+    # ENV.append "PKG_CONFIG_PATH",":#{HOMEBREW_PREFIX}/pkgconfig"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args

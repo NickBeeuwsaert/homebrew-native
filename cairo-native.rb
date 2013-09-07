@@ -16,8 +16,10 @@ class CairoNative < Formula
   depends_on 'pixman'
   depends_on 'glib'
   depends_on 'freetype'    
+  depends_on 'fontconfig'
+
   conflicts_with "cairo", :because=>"installs the same binaries"
-  
+
   def install
     # ENV.j1  # if your formula's build system can't parallelize
 
@@ -26,6 +28,7 @@ class CairoNative < Formula
     					  "--enable-xlib=no", "--enable-xlib-xrender=no",
     					  "--without-x", "--enable-xcb-shm=no", "--enable-xcb=no",
     					  "--enable-gobject=yes", "--enable-ft=yes",
+                          "--enable-fc=yes",
                           "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
