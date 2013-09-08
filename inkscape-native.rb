@@ -46,7 +46,7 @@ class InkscapeNative < Formula
  	ENV['CXX'] = "/usr/local/bin/g++-4.7"
  	
  	#These shouldn't be needed, but I don't want to recompile inkscape to test that
- 	ENV['LDFLAGS'] = "-L/usr/local/opt/gettext/lib"
+ 	ENV['LDFLAGS'] = "-L/usr/local/opt/gettext/lib #{`pkg-config pangoft2 --libs`}"
  	ENV['CXXFLAGS'] = "-I/usr/local/opt/gettext/include"
  	ENV['CFLAGS'] = "-I/usr/local/opt/gettext/include"
  	ENV['CPPFLAGS'] = "-I/usr/local/opt/gettext/include"
@@ -56,7 +56,7 @@ class InkscapeNative < Formula
     #This is ugly but it works,
     # I should be able to modify the patch below to do this better
     # But, again, I don't want to
-    system "make", "LDFLAGS=\"$(pkg-config pangoft2 --libs)\""
+    system "make"#, "LDFLAGS=\"#{`pkg-config pangoft2 --libs`}\""
     system "make", "install" # if this fails, try separate make/make install steps
   end
 
