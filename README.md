@@ -1,6 +1,11 @@
 Homebrew-native
 ===============
 This here is a homebrew tap so you can compile GTK+ applications without the need for XQuartz
+NOTE
+====
+PLEASE PLEASE PLEASE submit bug requests if it doesn't work out of the box, I don't know if some of the libraries compiled fine
+because of my system configuration, it would be greate if I could test this in a stock OSX install, but I can't do that D:
+
 Info!
 -----
 Before you install anything you should execute
