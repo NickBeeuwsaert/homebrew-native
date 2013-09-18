@@ -24,6 +24,8 @@ class Gtkx3Native < Formula
   depends_on 'atk'
   depends_on 'at-spi2-atk'
 
+  keg_only "for inkscape"
+  
   conflicts_with 'gtk+3', :because => "Installs the same binaries"
   
   def install

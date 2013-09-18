@@ -20,6 +20,8 @@ class GtkmmNative < Formula
   depends_on 'atkmm'
   depends_on 'cairomm-native'
   
+  keg_only "for inkscape"
+  
   conflicts_with "gtkmm", :because=>"installs the same binaries"
   
   def install

@@ -20,6 +20,7 @@ class GtkChthemeNative < Formula
   
   conflicts_with "gtk-chtheme", :because=>"installs the same binaries"
   
+  # keg_only "for inkscape"
   
 
   def install

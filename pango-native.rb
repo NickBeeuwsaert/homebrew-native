@@ -23,6 +23,8 @@ class PangoNative < Formula
   depends_on 'pixman'
   depends_on 'icu4c'
   depends_on 'xz'
+
+  keg_only "for inkscape"
   
   conflicts_with "pango", :because=>"installs the same binaries"
   

@@ -26,7 +26,9 @@ class GtkxNative < Formula
   depends_on "pango-native"
   depends_on "pixman"
   depends_on "pkg-config"
-  depends_on "xz"  
+  depends_on "xz"
+
+  keg_only "for inkscape"
   
   conflicts_with "gtk+", :because=>"installs the same binaries"
   

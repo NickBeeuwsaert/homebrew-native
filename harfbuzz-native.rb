@@ -19,6 +19,8 @@ class HarfbuzzNative < Formula
   
   conflicts_with "harfbuzz", :because=>"installs the same binaries"
   
+  keg_only "for inkscape"
+
   def install
     # ENV.j1  # if your formula's build system can't parallelize
 

@@ -17,6 +17,7 @@ class PangommNative < Formula
   depends_on 'glibmm'
   depends_on 'cairomm-native'
   
+  keg_only "for inkscape"
   conflicts_with "pangomm", :because=>"installs the same binaries"
   
   def install
