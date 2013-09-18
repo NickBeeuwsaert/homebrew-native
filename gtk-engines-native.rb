@@ -16,8 +16,8 @@ class GtkEnginesNative < Formula
   depends_on 'cairo-native'
   depends_on 'gtk+-native'  
   
-  keg_only "for inkscape"
-  
+  #keg_only "for inkscape"
+
   conflicts_with "gtk-engines", :because=>"installs the same binaries"
   
   def install

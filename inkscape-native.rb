@@ -46,10 +46,10 @@ class InkscapeNative < Formula
  	ENV['CXX'] = "/usr/local/bin/g++-4.7"
  	
  	#These shouldn't be needed, but I don't want to recompile inkscape to test that
- 	ENV['LDFLAGS'] = "-L/usr/local/opt/gettext/lib #{`pkg-config pangoft2 --libs`}"
- 	ENV['CXXFLAGS'] = "-I/usr/local/opt/gettext/include"
- 	ENV['CFLAGS'] = "-I/usr/local/opt/gettext/include"
- 	ENV['CPPFLAGS'] = "-I/usr/local/opt/gettext/include"
+ 	ENV['LDFLAGS'] = " -L/usr/local/opt/gettext/lib #{`pkg-config pangoft2 --libs`}"
+ 	ENV['CXXFLAGS'] = " -I/usr/local/opt/gettext/include"
+ 	ENV['CFLAGS'] = " -I/usr/local/opt/gettext/include"
+ 	ENV['CPPFLAGS'] = " -I/usr/local/opt/gettext/include"
 
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}", "--enable-lcms"

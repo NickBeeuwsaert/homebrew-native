@@ -21,8 +21,8 @@ class Gtkmm3Native < Formula
 
   conflicts_with 'gtkmm3', :because => "Installs the same binaries"
 
-  keg_only "for inkscape"
-  
+  #keg_only "for inkscape"
+
   def install
     # ENV.j1  # if your formula's build system can't parallelize
 

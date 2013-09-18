@@ -28,7 +28,7 @@ class GtkxNative < Formula
   depends_on "pkg-config"
   depends_on "xz"
 
-  keg_only "for inkscape"
+  #keg_only "for inkscape"
   
   conflicts_with "gtk+", :because=>"installs the same binaries"
   

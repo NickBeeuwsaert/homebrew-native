@@ -18,7 +18,7 @@ class CairoNative < Formula
   depends_on 'freetype'    
   depends_on 'fontconfig'
 
-  keg_only "for inkscape"
+  #keg_only "for inkscape"
 
   conflicts_with "cairo", :because=>"installs the same binaries"
 
